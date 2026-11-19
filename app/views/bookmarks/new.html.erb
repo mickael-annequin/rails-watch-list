@@ -1,0 +1,9 @@
+<h1>Ajout d'un bookmark</h1>
+
+<%= simple_form_for([@list, @bookmark]) do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Retour à la liste", list_path(@list) %>
