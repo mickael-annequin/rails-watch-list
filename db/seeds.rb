@@ -43,7 +43,7 @@ movies.each do |movie|
     title: movie[:title],
     overview: movie[:overview],
     rating: movie[:rating],
-    poster_url: "https://placehold.co/500x750?text=#{movie[:title].gsub(' ', '+')}"
+    poster_url: "https://picsum.photos/seed/#{movie[:title].parameterize}/400/600"
   )
 end
 puts "Created #{Movie.count} movies!"
