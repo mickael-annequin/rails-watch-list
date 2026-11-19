@@ -1,0 +1,11 @@
+<h1>Détail de la liste</h1>
+
+<h2><%= @list.name %></h2>
+
+<ul>
+<% @list.movies.each do |movie| %>
+  <li><%= movie.title %></li>
+<% end %>
+</ul>
+
+<%= link_to "Retour aux listes", lists_path %>
