@@ -15,4 +15,10 @@
 <% end %>
 </ul>
 
+<% @list.reviews.each do |review| %>
+  <p><%= review.content %> -- Note : <%= review.rating %> / 5</p>
+<% end %>
+
+<%= link_to "Notez ma liste", new_list_review_path(@list) %>
+
 <%= link_to "Retour aux listes", lists_path %>
