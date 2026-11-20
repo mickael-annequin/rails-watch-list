@@ -1,6 +1,10 @@
-<h1>Détail de la liste</h1>
+<% image = @list.photo.attached? ? cl_image_path(@list.photo.key) : "https://picsum.photos/seed/#{@list.id}/1200/400" %>
 
-<h2><%= @list.name %></h2>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image %>);">
+  <div class="container text-center">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
 
 <%= link_to "Ajouter un film à la liste", new_list_bookmark_path(@list) %>
 
